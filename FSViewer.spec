@@ -59,7 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/{xpm,tiff} \
 	$RPM_BUILD_ROOT%{_applnkdir}/Utilities
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install defs/chdef $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app
 install xpm/*.xpm $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/xpm
@@ -72,11 +73,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
-
 %dir %{_prefix}/GNUstep/Apps/FSViewer.app
 %attr(755,root,root) %{_prefix}/GNUstep/Apps/FSViewer.app/FSViewer
 %attr(755,root,root) %{_prefix}/GNUstep/Apps/FSViewer.app/chdef
-
 %{_prefix}/GNUstep/Apps/FSViewer.app/MagicFiles
 %{_prefix}/GNUstep/Apps/FSViewer.app/xpm
 %{_prefix}/GNUstep/Apps/FSViewer.app/tiff
