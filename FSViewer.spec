@@ -47,7 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/{xpm,tiff} \
 	$RPM_BUILD_ROOT%{_applnkdir}/Utilities
 
-make install-strip DESTDIR=$RPM_BUILD_ROOT
+%{__make} install-strip DESTDIR=$RPM_BUILD_ROOT
 
 install -s defs/chdef   $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app
 install xpm/*.xpm	$RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/xpm
