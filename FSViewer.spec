@@ -40,7 +40,7 @@ LDFLAGS="-s"; export LDFLAGS
 	--with-extralibs=" -lPropList"
 
 %build
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
