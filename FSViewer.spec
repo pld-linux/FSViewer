@@ -1,8 +1,8 @@
-Summary:	FSViewer is a NeXT FileViewer lookalike for Window Maker.
-Summary(pl):	FSViewer jest przegl±dark± plików dla WindowMakera.
+Summary:	FSViewer is a NeXT FileViewer lookalike for Window Maker
+Summary(pl):	FSViewer jest przegl±dark± plików dla WindowMakera
 Name:		FSViewer
 Version:	0.2.3
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
@@ -10,15 +10,18 @@ Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.csn.ul.ie/~clernong/download/%{name}.app-%{version}.tar.gz
 Source1:	http://www.csn.ul.ie/~clernong/download/icons.tar.gz
 Source2:	%{name}.desktop
+Patch0:		%{name}-ac_am15.patch
+Patch1:		%{name}-WINGs.patch
+Patch2:		%{name}-debian.patch
+Patch3:		%{name}-no_libnsl.patch
 URL:		http://www.csn.ul.ie/~clernong/projects/fsviewer.html
-BuildRequires:	libjpeg-devel
-BuildRequires:	libpng >= 1.0.8
-BuildRequires:	libPropList-devel >= 0.9.1
-BuildRequires:	libtiff-devel
-BuildRequires:	libungif-devel
 BuildRequires:	WindowMaker-devel >= 0.62.1
 BuildRequires:	XFree86-devel
-BuildRequires:	zlib-devel
+BuildRequires:	libPropList-devel >= 0.9.1
+BuildRequires:	libjpeg-devel
+BuildRequires:	libpng >= 1.0.8
+BuildRequires:	libtiff-devel
+BuildRequires:	libungif-devel
 Requires:	WindowMaker >= 0.61.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,10 +38,17 @@ NeXT FileViewer.
 
 %prep
 %setup -q -a1 -n FSViewer.app-%{version}
-%configure \
-	--with-extralibs=" -lPropList"
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
+rm -f missing
+aclocal
+autoconf
+automake -a -c
+%configure
 %{__make}
 
 %install
