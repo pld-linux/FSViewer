@@ -8,7 +8,9 @@ Group:		X11/Window Managers/Tools
 # newer (0.2.4), unofficial? versions:
 #Source0:	http://www.bayernline.de/~gscholz/linux/fsviewer/%{name}.app-%{version}.tar.gz
 Source0:	http://www.blackraven.cx/%{name}.app-%{version}.tar.gz
+# Source0-md5:	2e89029686126f9d519a67e0716ab5ff
 Source1:	http://www.blackraven.cx/icons.tar.gz
+# Source1-md5:	f07c9c1da6e87b7017ba5288a8fd5312
 Source2:	%{name}.desktop
 Patch0:		%{name}-ac_am15.patch
 Patch1:		%{name}-WINGs.patch
