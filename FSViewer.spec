@@ -12,14 +12,14 @@ Source2:	FSViewer.desktop
 URL: 		http://www.csn.ul.ie/~clernong/projects/fsviewer.html
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
-BuildRequires:	libPropList-devel
+BuildRequires:	libPropList-devel >= 0.9.1
 BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
-BuildRequires:	WindowMaker-devel >= 0.60.0
+BuildRequires:	WindowMaker-devel >= 0.61.0
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
 BuildRequires:	zlib-devel
-Requires:	WindowMaker >= 0.60.0
+Requires:	WindowMaker >= 0.61.0
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix		/usr/X11R6
@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {AUTHORS,ChangeLog,README}.gz
+%doc {AUTHORS,ChangeLog,README}.gz 
 
 %dir %{_prefix}/GNUstep/Apps/FSViewer.app
 %attr(755,root,root) %{_prefix}/GNUstep/Apps/FSViewer.app/FSViewer
