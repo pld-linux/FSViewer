@@ -15,7 +15,7 @@ URL: 		http://www.csn.ul.ie/~clernong/projects/fsviewer.html
 Vendor: 	George Clernon <clernong@tinet.ie>
 Source: 	http://www.csn.ul.ie/~clernong/download/FSViewer.app-%{version}.tar.gz
 Prefix: 	%{prefix}
-BuildRoot: 	/var/tmp/%{name}-%{version}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 FSViewer is a NeXT FileViewer lookalike for Window Maker. Viewing is currently 
