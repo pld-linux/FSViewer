@@ -44,14 +44,14 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/{xpm,tiff} \
-	$RPM_BUILD_ROOT/etc/X11/applnk/Utilities
+	$RPM_BUILD_ROOT/usr/X11R6/share/applnk/Utilities
 
 make install-strip DESTDIR=$RPM_BUILD_ROOT
 
 install -s defs/chdef   $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app
 install xpm/*.xpm	$RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/xpm
 install tiff/*		$RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/tiff
-install %{SOURCE2}	$RPM_BUILD_ROOT/etc/X11/applnk/Utilities
+install %{SOURCE2}	$RPM_BUILD_ROOT/usr/X11R6/share/applnk/Utilities
 
 gzip -9nf AUTHORS ChangeLog README
 
@@ -70,4 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/GNUstep/Apps/FSViewer.app/xpm
 %{_prefix}/GNUstep/Apps/FSViewer.app/tiff
 
-/etc/X11/applnk/Utilities/FSViewer.desktop
+/usr/X11R6/share/applnk/Utilities/FSViewer.desktop
