@@ -27,7 +27,6 @@ BuildRequires:	libungif-devel
 Requires:	WindowMaker >= 0.61.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 FSViewer is a NeXT FileViewer lookalike for Window Maker. Viewing is
