@@ -1,7 +1,7 @@
 Summary: 	FSViewer is a NeXT FileViewer lookalike for Window Maker.
 Summary(pl):	FSViewer jest przegl±dark± plików dla WindowMakera.
 Name: 		FSViewer
-Version: 	0.2.0
+Version: 	0.2.1
 Release: 	1
 Copyright: 	GPL
 Group: 		X11/Window Managers/Tools
@@ -33,9 +33,8 @@ jak NeXT FileViewer.
 
 %prep
 %setup -q -a1 -n FSViewer.app-%{version}
-CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
-./configure %{_target_platform} \
-	--prefix=%{_prefix} \
+LDFLAGS="-s"; export LDFLAGS
+%configure \
 	--with-extralibs=" -lPropList"
 
 %build
@@ -45,8 +44,7 @@ make
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/{xpm,tiff}
 
-make install-strip \
-	DESTDIR=$RPM_BUILD_ROOT
+make install-strip DESTDIR=$RPM_BUILD_ROOT
 
 install xpm/*.xpm $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/xpm
 install tiff/* $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/tiff
