@@ -34,7 +34,6 @@ NeXT FileViewer.
 
 %prep
 %setup -q -a1 -n FSViewer.app-%{version}
-LDFLAGS="-s"; export LDFLAGS
 %configure \
 	--with-extralibs=" -lPropList"
 
@@ -46,12 +45,12 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/{xpm,tiff} \
 	$RPM_BUILD_ROOT%{_applnkdir}/Utilities
 
-%{__make} install-strip DESTDIR=$RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install -s defs/chdef   $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app
-install xpm/*.xpm	$RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/xpm
-install tiff/*		$RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/tiff
-install %{SOURCE2}	$RPM_BUILD_ROOT%{_applnkdir}/Utilities
+install defs/chdef $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app
+install xpm/*.xpm $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/xpm
+install tiff/* $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/tiff
+install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Utilities
 
 gzip -9nf AUTHORS ChangeLog README
 
