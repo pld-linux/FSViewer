@@ -22,6 +22,8 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 Requires:	WindowMaker >= 0.61.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
