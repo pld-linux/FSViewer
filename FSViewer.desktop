@@ -6,4 +6,5 @@ Exec=/usr/lib/GNUstep/Apps/FSViewer.app/FSViewer
 Terminal=false
 Type=Application
 Encoding=UTF-8
+Categories=Utility;Viewer;
 # vi: encoding=utf-8
