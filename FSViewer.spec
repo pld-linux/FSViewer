@@ -6,10 +6,10 @@ Release: 	2
 Copyright: 	GPL
 Group: 		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-URL: 		http://www.csn.ul.ie/~clernong/projects/fsviewer.html
 Source0: 	http://www.csn.ul.ie/~clernong/download/FSViewer.app-%{version}.tar.gz
 Source1:	http://www.csn.ul.ie/~clernong/download/icons.tar.gz
 Source2:	FSViewer.desktop
+URL: 		http://www.csn.ul.ie/~clernong/projects/fsviewer.html
 BuildPrereq:	libjpeg-devel
 BuildPrereq:	libpng-devel
 BuildPrereq:	libPropList-devel
