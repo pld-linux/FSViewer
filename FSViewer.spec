@@ -10,15 +10,15 @@ Source0: 	http://www.csn.ul.ie/~clernong/download/FSViewer.app-%{version}.tar.gz
 Source1:	http://www.csn.ul.ie/~clernong/download/icons.tar.gz
 Source2:	FSViewer.desktop
 URL: 		http://www.csn.ul.ie/~clernong/projects/fsviewer.html
-BuildPrereq:	libjpeg-devel
-BuildPrereq:	libpng-devel
-BuildPrereq:	libPropList-devel
-BuildPrereq:	libtiff-devel
-BuildPrereq:	libungif-devel
-BuildPrereq:	WindowMaker-devel
-BuildPrereq:	XFree86-devel
-BuildPrereq:	xpm-devel
-BuildPrereq:	zlib-devel
+BuildRequires:	libjpeg-devel
+BuildRequires:	libpng-devel
+BuildRequires:	libPropList-devel
+BuildRequires:	libtiff-devel
+BuildRequires:	libungif-devel
+BuildRequires:	WindowMaker-devel
+BuildRequires:	XFree86-devel
+BuildRequires:	xpm-devel
+BuildRequires:	zlib-devel
 Requires:	WindowMaker >= 0.53
 BuildRoot:	/tmp/%{name}-%{version}-root
 
