@@ -8,14 +8,10 @@ Group:		X11/Window Managers/Tools
 Source0:	http://www.bayernline.de/~gscholz/linux/fsviewer/%{name}.app-%{version}.tar.gz
 # Source0-md5:	d1f849d1f955c35b18201860e485d332
 Source2:	%{name}.desktop
-# for WindowMaker 0.81.0 (not released yet? so for future use)
-#Patch0:		http://www.bayernline.de/~gscholz/linux/fsviewer/FSViewer.app-0.2.5-WM-0.81.0.patch.gz
+Patch0:		http://www.bayernline.de/~gscholz/linux/fsviewer/FSViewer.app-0.2.5-WM-0.81.0.patch.gz
 Patch1:		%{name}-no_libnsl.patch
-#Patch1:		%{name}-ac_am15.patch
-#Patch2:		%{name}-WINGs.patch
-#Patch3:		%{name}-debian.patch
 URL:		http://www.bayernline.de/~gscholz/linux/fsviewer/
-BuildRequires:	WindowMaker-devel >= 0.70.0
+BuildRequires:	WindowMaker-devel >= 0.81.0-0.20040321.4
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -46,7 +42,7 @@ NeXT FileViewer.
 
 %prep
 %setup -q -n FSViewer.app-%{version}
-#%patch0 -p1
+%patch0 -p1
 %patch1 -p1
 
 %build
