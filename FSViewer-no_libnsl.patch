@@ -1,0 +1,11 @@
+--- FSViewer.app-0.2.3/configure.in~	Mon Sep 17 19:33:41 2001
++++ FSViewer.app-0.2.3/configure.in	Mon Sep 17 19:35:04 2001
+@@ -82,7 +82,7 @@
+ AC_CHECK_LIB(PropList, PLGetProplistWithPath,, AC_MSG_WARN(Can't find PropList library: Please install libPropList (included in WindowMaker)), , $LIBS)
+ 
+ dnl Needed by Sun/Solaris
+-AC_CHECK_LIB(nsl, gethostbyname)
++AC_CHECK_FUNC(gethostbyname, [], AC_CHECK_LIB(nsl, gethostbyname))
+ AC_CHECK_LIB(socket, socket)
+ 
+ dnl Needed by FreeBSD
