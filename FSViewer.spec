@@ -1,8 +1,8 @@
 Summary: 	FSViewer is a NeXT FileViewer lookalike for Window Maker.
 Summary(pl):	FSViewer jest przegl±dark± plików dla WindowMakera.
 Name: 		FSViewer
-Version: 	0.2.1
-Release: 	2
+Version: 	0.2.2
+Release: 	1
 Copyright: 	GPL
 Group: 		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -19,7 +19,7 @@ BuildRequires:	WindowMaker-devel
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
 BuildRequires:	zlib-devel
-Requires:	WindowMaker >= 0.53
+Requires:	WindowMaker >= 0.60.0
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define	_prefix	/usr/X11R6
@@ -48,10 +48,10 @@ install -d $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/{xpm,tiff} \
 
 make install-strip DESTDIR=$RPM_BUILD_ROOT
 
-install xpm/*.xpm $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/xpm
-install tiff/* $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/tiff
-install -s defs/chdef $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app
-install %{SOURCE2} $RPM_BUILD_ROOT/etc/X11/applnk/Utilities
+install -s defs/chdef   $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app
+install xpm/*.xpm	$RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/xpm
+install tiff/*		$RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/tiff
+install %{SOURCE2}	$RPM_BUILD_ROOT/etc/X11/applnk/Utilities
 
 gzip -9nf AUTHORS ChangeLog README
 
