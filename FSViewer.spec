@@ -5,23 +5,25 @@ Version:	0.2.3
 Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
-Source0:	http://www.csn.ul.ie/~clernong/download/%{name}.app-%{version}.tar.gz
-Source1:	http://www.csn.ul.ie/~clernong/download/icons.tar.gz
+# newer (0.2.4), unofficial? versions:
+#Source0:	http://www.bayernline.de/~gscholz/linux/fsviewer/%{name}.app-%{version}.tar.gz
+Source0:	http://www.blackraven.cx/%{name}.app-%{version}.tar.gz
+Source1:	http://www.blackraven.cx/icons.tar.gz
 Source2:	%{name}.desktop
 Patch0:		%{name}-ac_am15.patch
 Patch1:		%{name}-WINGs.patch
 Patch2:		%{name}-debian.patch
 Patch3:		%{name}-no_libnsl.patch
-URL:		http://www.csn.ul.ie/~clernong/projects/fsviewer.html
+URL:		http://www.bayernline.de/~gscholz/linux/fsviewer/
 BuildRequires:	WindowMaker-devel >= 0.62.1
 BuildRequires:	XFree86-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libPropList-devel >= 0.9.1
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
-BuildRequires:	autoconf
-BuildRequires:	automake
 Requires:	WindowMaker >= 0.61.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
