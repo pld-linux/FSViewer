@@ -1,0 +1,199 @@
+--- FSViewer.app-0.2.3/src/FSViewer.c~	Sat Oct  9 20:45:22 1999
++++ FSViewer.app-0.2.3/src/FSViewer.c	Mon Sep 17 18:53:43 2001
+@@ -3,7 +3,7 @@
+ #include <X11/Xutil.h>
+ #include <X11/Xproto.h>
+ #include <WMaker.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include <X11/Xlocale.h>
+ #include <X11/keysym.h>
+ 
+--- FSViewer.app-0.2.3/src/FSViewer.h~	Sat Oct  9 20:59:19 1999
++++ FSViewer.app-0.2.3/src/FSViewer.h	Mon Sep 17 18:54:40 2001
+@@ -12,8 +12,8 @@
+ #include <proplist.h>
+ #include <wraster.h>
+ 
+-#include <WINGs.h>
+-#include <WUtil.h>
++#include <WINGs/WINGs.h>
++#include <WINGs/WUtil.h>
+ 
+ #include "files.h"
+ 
+--- FSViewer.app-0.2.3/src/DnD.c~	Sat Oct  9 20:45:23 1999
++++ FSViewer.app-0.2.3/src/DnD.c	Mon Sep 17 19:03:53 2001
+@@ -15,7 +15,7 @@
+    Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+  */
+ 
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include <X11/Xatom.h>
+ #include <X11/Xmu/WinUtil.h>
+ #include <X11/cursorfont.h>
+--- FSViewer.app-0.2.3/src/FSBrowser.c~	Sat Oct  9 20:48:23 1999
++++ FSViewer.app-0.2.3/src/FSBrowser.c	Mon Sep 17 19:04:21 2001
+@@ -1,5 +1,5 @@
+ #include <WMaker.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include <math.h> /* for : double rint (double) */
+ 
+ #include "FSBrowser.h"
+--- FSViewer.app-0.2.3/src/FSFileButton.c~	Sat Oct  9 20:45:23 1999
++++ FSViewer.app-0.2.3/src/FSFileButton.c	Mon Sep 17 19:04:42 2001
+@@ -7,7 +7,7 @@
+  *****************************************************************************/
+ 
+ #include <WMaker.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include <sys/stat.h>
+ #include <unistd.h>
+ 
+--- FSViewer.app-0.2.3/src/FSFileView.c~	Sat Oct  9 20:45:21 1999
++++ FSViewer.app-0.2.3/src/FSFileView.c	Mon Sep 17 19:05:11 2001
+@@ -4,7 +4,7 @@
+ #include <X11/Xutil.h>
+ #include <X11/Xproto.h>
+ #include <WMaker.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include <X11/Xlocale.h>
+ #include <X11/keysym.h>
+ #include <sys/stat.h>
+--- FSViewer.app-0.2.3/src/FSMCList.c~	Sun Oct 10 16:10:56 1999
++++ FSViewer.app-0.2.3/src/FSMCList.c	Mon Sep 17 19:06:02 2001
+@@ -1,5 +1,5 @@
+ #include <WMaker.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include <grp.h>
+ #include <pwd.h>
+ #include <sys/types.h>
+--- FSViewer.app-0.2.3/src/FSFinder.c~	Sat Oct  9 20:45:24 1999
++++ FSViewer.app-0.2.3/src/FSFinder.c	Mon Sep 17 19:05:34 2001
+@@ -4,7 +4,7 @@
+ #include <X11/Xutil.h>
+ #include <X11/Xproto.h>
+ #include <WMaker.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include <X11/Xlocale.h>
+ #include <X11/keysym.h>
+ #include <sys/stat.h>
+--- FSViewer.app-0.2.3/src/FSMenu.c~	Sat Oct  9 20:45:21 1999
++++ FSViewer.app-0.2.3/src/FSMenu.c	Mon Sep 17 19:06:26 2001
+@@ -1,4 +1,4 @@
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ 
+ #include "files.h"
+ #include "FSFileButton.h"
+--- FSViewer.app-0.2.3/src/FSPanel.c~	Sat Oct  9 20:45:22 1999
++++ FSViewer.app-0.2.3/src/FSPanel.c	Mon Sep 17 19:06:41 2001
+@@ -2,7 +2,7 @@
+ 
+ #include <X11/Xatom.h>
+ #include <X11/keysym.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include "config.h"
+ #include "FSViewer.h"
+ #include "FSUtils.h"
+--- FSViewer.app-0.2.3/src/FSPathView.c~	Sat Oct  9 20:45:24 1999
++++ FSViewer.app-0.2.3/src/FSPathView.c	Mon Sep 17 19:06:57 2001
+@@ -1,5 +1,5 @@
+ #include <WMaker.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include <math.h> /* for : double rint (double) */
+ 
+ #include "files.h"
+--- FSViewer.app-0.2.3/src/FSPrefs.c~	Sat Oct  9 20:45:24 1999
++++ FSViewer.app-0.2.3/src/FSPrefs.c	Mon Sep 17 19:07:15 2001
+@@ -1,6 +1,6 @@
+ #include <X11/Xatom.h>
+ #include <X11/keysym.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ 
+ #include "FSViewer.h"
+ #include "FSUtils.h"
+--- FSViewer.app-0.2.3/src/FSUtils.c~	Sat Oct  9 20:45:22 1999
++++ FSViewer.app-0.2.3/src/FSUtils.c	Mon Sep 17 19:07:32 2001
+@@ -19,7 +19,7 @@
+ #include <stdlib.h>
+ #include <errno.h>
+ #include <unistd.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include <wraster.h>
+ #include <X11/cursorfont.h>
+ 
+--- FSViewer.app-0.2.3/src/files.c~	Sat Oct  9 20:45:22 1999
++++ FSViewer.app-0.2.3/src/files.c	Mon Sep 17 19:29:46 2001
+@@ -11,8 +11,8 @@
+ #include <errno.h>
+ #include <dirent.h>
+ #include <stdarg.h>
+-#include <WINGs.h>
+-#include <WUtil.h>
++#include <WINGs/WINGs.h>
++#include <WINGs/WUtil.h>
+ 
+ #include "FSViewer.h"
+ #include "FSUtils.h"
+--- FSViewer.app-0.2.3/src/FSFileBrowser.c~	Sat Oct  9 20:47:24 1999
++++ FSViewer.app-0.2.3/src/FSFileBrowser.c	Mon Sep 17 19:33:07 2001
+@@ -1,5 +1,5 @@
+ #include <WMaker.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include <sys/stat.h>
+ #include <unistd.h>
+ 
+--- FSViewer.app-0.2.3/src/DnD.h~	Sat Oct  9 20:45:23 1999
++++ FSViewer.app-0.2.3/src/DnD.h	Mon Sep 17 19:36:23 2001
+@@ -1,7 +1,7 @@
+ #ifndef WINGs_DND
+ #define WINGs_DND
+ 
+-#include <WINGs.h>
++#include <WINGs/WINGs.h>
+ 
+ void DndInitialize(WMWidget *w);
+ 
+--- FSViewer.app-0.2.3/src/timestampWidget.c~	Sat Oct  9 20:45:22 1999
++++ FSViewer.app-0.2.3/src/timestampWidget.c	Mon Sep 17 19:46:47 2001
+@@ -19,7 +19,7 @@
+ /* Header Files **************************************************************/
+ 
+ #include <X11/xpm.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include "timestampWidget.h"
+ #include "xpm/clk.xpm"
+ #include "xpm/led.xpm"
+--- FSViewer.app-0.2.3/src/timestampWidget.h~	Sat Oct  9 20:45:22 1999
++++ FSViewer.app-0.2.3/src/timestampWidget.h	Mon Sep 17 19:48:21 2001
+@@ -20,7 +20,7 @@
+ 
+ /* Header Files **************************************************************/
+ 
+-#include <WINGs.h>
++#include <WINGs/WINGs.h>
+ #include <time.h>
+ 
+ 
+--- FSViewer.app-0.2.3/src/attribsInspector.c~	Sat Oct  9 20:45:22 1999
++++ FSViewer.app-0.2.3/src/attribsInspector.c	Mon Sep 17 19:51:50 2001
+@@ -1,5 +1,5 @@
+ #include <time.h>
+-#include <WINGsP.h>
++#include <WINGs/WINGsP.h>
+ #include <grp.h>
+ #include <pwd.h>
+ #include <sys/types.h>
