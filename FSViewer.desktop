@@ -1,8 +1,7 @@
 [Desktop Entry]
 Name=FSViewer
 Comment=File Viewer
-Comment[pl]=PrzeglÄ…darka plikÃ³w
+Comment[pl]=Przegl±darka plików
 Exec=/usr/X11R6/GNUstep/Apps/FSViewer.app/FSViewer
 Terminal=0
 Type=Application
-# vi: encoding=utf-8
