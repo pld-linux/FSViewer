@@ -17,7 +17,6 @@ BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
 BuildRequires:	WindowMaker-devel >= 0.62.1
 BuildRequires:	XFree86-devel
-BuildRequires:	xpm-devel
 BuildRequires:	zlib-devel
 Requires:	WindowMaker >= 0.61.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
