@@ -1,15 +1,15 @@
-Summary: 	FSViewer is a NeXT FileViewer lookalike for Window Maker.
+Summary:	FSViewer is a NeXT FileViewer lookalike for Window Maker.
 Summary(pl):	FSViewer jest przegl±dark± plików dla WindowMakera.
-Name: 		FSViewer
-Version: 	0.2.3
-Release: 	1
-Copyright: 	GPL
-Group: 		X11/Window Managers/Tools
+Name:		FSViewer
+Version:	0.2.3
+Release:	1
+License:	GPL
+Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source0: 	http://www.csn.ul.ie/~clernong/download/FSViewer.app-%{version}.tar.gz
+Source0:	http://www.csn.ul.ie/~clernong/download/%{name}.app-%{version}.tar.gz
 Source1:	http://www.csn.ul.ie/~clernong/download/icons.tar.gz
 Source2:	FSViewer.desktop
-URL: 		http://www.csn.ul.ie/~clernong/projects/fsviewer.html
+URL:		http://www.csn.ul.ie/~clernong/projects/fsviewer.html
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libPropList-devel >= 0.9.1
@@ -25,12 +25,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_prefix		/usr/X11R6
 
 %description
-FSViewer is a NeXT FileViewer lookalike for Window Maker. Viewing is currently 
-supported via browser mode. It has been written in C using the WINGs library.  
+FSViewer is a NeXT FileViewer lookalike for Window Maker. Viewing is
+currently supported via browser mode. It has been written in C using
+the WINGs library.
 
 %description -l pl
-FSViewer jest przegl±dark± plików dla WindowMakera wygl±daj±c± 
-jak NeXT FileViewer.
+FSViewer jest przegl±dark± plików dla WindowMakera wygl±daj±c± jak
+NeXT FileViewer.
 
 %prep
 %setup -q -a1 -n FSViewer.app-%{version}
