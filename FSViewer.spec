@@ -71,9 +71,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/GNUstep/Apps/FSViewer.app/tiff
 
 /etc/X11/applnk/Utilities/FSViewer.desktop
-
-%changelog
-* Wed Jun 23 1999 Piotr Czerwiñski <pius@pld.org.pl> 
-  [0.2.0-1]
-- modified for PLD use,
-- based on spec file by Ryan Weaver <ryanw@infohwy.com>.
