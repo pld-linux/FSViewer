@@ -5,8 +5,6 @@ Version:	0.2.3
 Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
-Group(de):	X11/Fenstermanager/Werkzeuge
-Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.csn.ul.ie/~clernong/download/%{name}.app-%{version}.tar.gz
 Source1:	http://www.csn.ul.ie/~clernong/download/icons.tar.gz
 Source2:	%{name}.desktop
