@@ -20,10 +20,9 @@ BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
 BuildRequires:	zlib-devel
 Requires:	WindowMaker >= 0.61.0
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 FSViewer is a NeXT FileViewer lookalike for Window Maker. Viewing is currently 
