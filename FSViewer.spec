@@ -2,7 +2,7 @@ Summary:	FSViewer is a NeXT FileViewer lookalike for Window Maker.
 Summary(pl):	FSViewer jest przegl±dark± plików dla WindowMakera.
 Name:		FSViewer
 Version:	0.2.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -15,7 +15,7 @@ BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libPropList-devel >= 0.9.1
 BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
-BuildRequires:	WindowMaker-devel >= 0.61.0
+BuildRequires:	WindowMaker-devel >= 0.62.1
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
 BuildRequires:	zlib-devel
