@@ -2,7 +2,7 @@
 Name=FSViewer
 Comment=File Viewer
 Comment[pl]=Przeglądarka plików
-Exec=/usr/X11R6/GNUstep/Apps/FSViewer.app/FSViewer
+Exec=/usr/lib/GNUstep/Apps/FSViewer.app/FSViewer
 Terminal=0
 Type=Application
 # vi: encoding=utf-8
