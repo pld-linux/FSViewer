@@ -1,0 +1,89 @@
+--- fsviewer-0.2.3.orig/src/FSFileView.c
++++ fsviewer-0.2.3/src/FSFileView.c
+@@ -397,10 +397,10 @@
+     if ((fView->primary))
+     {
+ 	memset((void *) &attributes, 0, sizeof(GNUstepWMAttributes));
+-	attributes.window_style = (NSTitledWindowMask |
+-				   NSMiniaturizableWindowMask | 
+-				   NSResizableWindowMask);
+-	attributes.window_level = NSNormalWindowLevel;
++	attributes.window_style = (WMTitledWindowMask |
++				   WMMiniaturizableWindowMask | 
++				   WMResizableWindowMask);
++	attributes.window_level = WMNormalWindowLevel;
+ 	attributes.extra_flags = GSFullKeyboardEventsFlag;
+ 	attributes.flags = (GSWindowStyleAttr | GSWindowLevelAttr |
+ 			    GSExtraFlagsAttr);
+--- fsviewer-0.2.3.orig/src/FSFinder.c
++++ fsviewer-0.2.3/src/FSFinder.c
+@@ -138,11 +138,11 @@
+     }
+     
+     memset((void *) &attributes, 0, sizeof(GNUstepWMAttributes));
+-    attributes.window_style = (NSTitledWindowMask |
+-			       NSMiniaturizableWindowMask | 
+-			       NSClosableWindowMask |
+-			       NSResizableWindowMask);
+-    attributes.window_level = NSNormalWindowLevel;
++    attributes.window_style = (WMTitledWindowMask |
++			       WMMiniaturizableWindowMask | 
++			       WMClosableWindowMask |
++			       WMResizableWindowMask);
++    attributes.window_level = WMNormalWindowLevel;
+     attributes.extra_flags = GSFullKeyboardEventsFlag;
+     attributes.flags = (GSWindowStyleAttr | GSWindowLevelAttr |
+ 			GSExtraFlagsAttr);
+--- fsviewer-0.2.3.orig/src/FSPanel.c
++++ fsviewer-0.2.3/src/FSPanel.c
+@@ -1564,10 +1564,10 @@
+     WMCloseWindow(selIcon->win);
+     WMUnmapWidget(selIcon->win);
+     WMDestroyWidget(selIcon->win);
+-    free((void *) selIcon);
+     if(selIcon->iconName)
+ 	imgStr = wstrdup(selIcon->iconName);
+ 
++    free((void *) selIcon);
+     selIcon = NULL;
+ 
+     return imgStr;
+--- fsviewer-0.2.3.orig/src/FSViewer.c
++++ fsviewer-0.2.3/src/FSViewer.c
+@@ -127,8 +127,8 @@
+     }
+ 
+     memset((void *) &attributes, 0, sizeof(GNUstepWMAttributes));
+-    attributes.window_style = (NSTitledWindowMask | NSClosableWindowMask);
+-    attributes.window_level = NSFloatingWindowLevel;
++    attributes.window_style = (WMTitledWindowMask | WMClosableWindowMask);
++    attributes.window_level = WMFloatingWindowLevel;
+     attributes.extra_flags = GSFullKeyboardEventsFlag;
+     attributes.flags =
+ 	(GSWindowStyleAttr | GSWindowLevelAttr | GSExtraFlagsAttr);
+@@ -153,10 +153,10 @@
+     }
+ 
+     memset((void *) &attributes, 0, sizeof(GNUstepWMAttributes));
+-    attributes.window_style = (NSTitledWindowMask | 
+-			       NSClosableWindowMask |
+-			       NSMiniaturizableWindowMask);
+-    attributes.window_level = NSNormalWindowLevel;
++    attributes.window_style = (WMTitledWindowMask | 
++			       WMClosableWindowMask |
++			       WMMiniaturizableWindowMask);
++    attributes.window_level = WMNormalWindowLevel;
+     attributes.extra_flags = GSFullKeyboardEventsFlag;
+     attributes.flags =
+ 	(GSWindowStyleAttr | GSWindowLevelAttr | GSExtraFlagsAttr);
+@@ -182,8 +182,8 @@
+     // This is horrible: there must be a better way?
+     XStoreName(fsViewer->dpy, window, " ");
+     memset((void *) &attributes, 0, sizeof(GNUstepWMAttributes));
+-    attributes.window_style = (NSTitledWindowMask);
+-    attributes.window_level = NSFloatingWindowLevel;
++    attributes.window_style = (WMTitledWindowMask);
++    attributes.window_level = WMFloatingWindowLevel;
+     attributes.extra_flags = GSFullKeyboardEventsFlag;
+     attributes.flags =
+ 	(GSWindowStyleAttr | GSWindowLevelAttr | GSExtraFlagsAttr);
