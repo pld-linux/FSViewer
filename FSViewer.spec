@@ -63,14 +63,12 @@ install xpm/*.xpm $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/xpm
 install tiff/* $RPM_BUILD_ROOT%{_prefix}/GNUstep/Apps/FSViewer.app/tiff
 install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Utilities
 
-gzip -9nf AUTHORS ChangeLog README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {AUTHORS,ChangeLog,README}.gz 
+%doc AUTHORS ChangeLog README
 
 %dir %{_prefix}/GNUstep/Apps/FSViewer.app
 %attr(755,root,root) %{_prefix}/GNUstep/Apps/FSViewer.app/FSViewer
