@@ -18,10 +18,10 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 # the rest is required for libwraster (but not all libs from WindowMaker-devel):
 BuildRequires:	Hermes-devel
+BuildRequires:	giflib-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libtiff-devel
-BuildRequires:	libungif-devel
 # the end of libwraster deps
 Requires:	WindowMaker >= 0.70.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
