@@ -1,5 +1,5 @@
 Summary:	FSViewer is a NeXT FileViewer lookalike for Window Maker
-Summary(pl):	FSViewer jest przegl±dark± plików dla Window Makera
+Summary(pl.UTF-8):   FSViewer jest przeglÄ…darkÄ… plikÃ³w dla Window Makera
 Name:		FSViewer
 Version:	0.2.5
 Release:	4
@@ -36,8 +36,8 @@ FSViewer is a NeXT FileViewer lookalike for Window Maker. Viewing is
 currently supported via browser mode. It has been written in C using
 the WINGs library.
 
-%description -l pl
-FSViewer jest przegl±dark± plików dla Window Makera wygl±daj±c± jak
+%description -l pl.UTF-8
+FSViewer jest przeglÄ…darkÄ… plikÃ³w dla Window Makera wyglÄ…dajÄ…cÄ… jak
 NeXT FileViewer.
 
 %prep
