@@ -5,6 +5,5 @@ Comment[pl]=Przeglądarka plików
 Exec=/usr/lib/GNUstep/Apps/FSViewer.app/FSViewer
 Terminal=false
 Type=Application
-Encoding=UTF-8
 Categories=Utility;FileManager;
 # vi: encoding=utf-8
