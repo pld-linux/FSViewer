@@ -1,15 +1,14 @@
 Summary:	FSViewer is a NeXT FileViewer lookalike for Window Maker
 Summary(pl.UTF-8):	FSViewer jest przeglądarką plików dla Window Makera
 Name:		FSViewer
-Version:	0.2.5
-Release:	4
+Version:	0.2.6
+Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
-Source0:	http://www.bayernline.de/~gscholz/linux/fsviewer/%{name}.app-%{version}.tar.gz
-# Source0-md5:	d1f849d1f955c35b18201860e485d332
+Source0:	http://www.bayernline.de/~gscholz/linux/fsviewer/fsviewer-app-%{version}.tar.gz
+# Source0-md5:	d3f163768ef6c1631a14779a76bbb9ee
 Source2:	%{name}.desktop
-Patch0:		http://www.bayernline.de/~gscholz/linux/fsviewer/FSViewer.app-0.2.5-WM-0.81.0.patch.gz
-Patch1:		%{name}-no_libnsl.patch
+Patch0:		%{name}-no_libnsl.patch
 URL:		http://www.bayernline.de/~gscholz/linux/fsviewer/
 BuildRequires:	WindowMaker-devel >= 0.81.0-0.20040321.4
 BuildRequires:	XFree86-devel
@@ -41,9 +40,8 @@ FSViewer jest przeglądarką plików dla Window Makera wyglądającą jak
 NeXT FileViewer.
 
 %prep
-%setup -q -n FSViewer.app-%{version}
+%setup -q -n fsviewer-app-%{version}
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__gettextize}
@@ -80,3 +78,5 @@ rm -rf $RPM_BUILD_ROOT
 %{gsappsdir}/FSViewer.app/xpm
 %{gsappsdir}/FSViewer.app/tiff
 %{_desktopdir}/FSViewer.desktop
+%{_mandir}/man1/chdef.1x.*
+%{_mandir}/man1/fsviewer.1x.*
