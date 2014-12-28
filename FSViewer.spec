@@ -14,7 +14,7 @@ BuildRequires:	WindowMaker-devel >= 0.81.0-0.20040321.4
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 # the rest is required for libwraster (but not all libs from WindowMaker-devel):
 BuildRequires:	Hermes-devel
 BuildRequires:	giflib-devel
